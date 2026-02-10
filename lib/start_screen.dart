@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz, {super.key});
+
+  final void Function() startQuiz;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 63, 8, 165),
-            Color.fromARGB(255, 12, 1, 39),
+            const Color.fromARGB(255, 60, 9, 214),
+            const Color.fromARGB(255, 20, 28, 100),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -21,21 +23,24 @@ class StartScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
-              'assets/images/quiz-logo.png',
+              "assets/images/quiz-logo.png",
               width: 280,
               color: const Color.fromARGB(200, 255, 255, 255),
             ),
+
             const SizedBox(height: 80),
-            const Text(
-              "Challenge yourself on this quiz!",
-              style: TextStyle(color: Colors.white, fontSize: 22),
-            ),
-            const SizedBox(height: 30),
             OutlinedButton.icon(
-              onPressed: () {},
+              onPressed: startQuiz,
               icon: const Icon(Icons.arrow_circle_right_outlined),
-              style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
-              label: const Text("Start Quiz"),
+              style: OutlinedButton.styleFrom(
+                foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+              ),
+              label: Text("Start Quiz"),
+            ),
+
+            Text(
+              "Challenge yourself on this quiz app",
+              style: TextStyle(fontSize: 24, color: Colors.white),
             ),
           ],
         ),
