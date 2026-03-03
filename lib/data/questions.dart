@@ -4,7 +4,7 @@ const questions = [
   QuizQuestion(
     'What is Waldo best known for?',
     [
-      'Hiding in crowds',
+      'Hiding in crowds', //correct
       'Flying planes',
       'Cooking food',
       'Solving crimes',
@@ -13,7 +13,7 @@ const questions = [
   QuizQuestion(
     'What colors does Waldo usually wear?',
     [
-      'Red and white',
+      'Red and white', //correct
       'Blue and yellow',
       'Green and black',
       'Purple and orange',
@@ -22,7 +22,7 @@ const questions = [
   QuizQuestion(
     'What item does Waldo often carry?',
     [
-      'A walking stick',
+      'A walking stick', //correct
       'A sword',
       'A camera',
       'A backpack',
@@ -31,7 +31,7 @@ const questions = [
   QuizQuestion(
     'Where does Waldo usually appear?',
     [
-      'In crowded scenes',
+      'In crowded scenes', //correct
       'In space',
       'Underwater',
       'On a farm',
@@ -41,7 +41,7 @@ const questions = [
     'What makes Waldo hard to find?',
     [
       'He blends into busy backgrounds',
-      'He hides in plain sight',
+      'He hides in plain sight', //correct
       'He runs very clever',
       'Scooby-Doo',
     ],
@@ -50,7 +50,7 @@ const questions = [
     'SCP-4885 also known as',
     [
       'The reader',
-      'Waldo',
+      'Waldo', //correct
       'Find Him',
       'Online Friend',
     ],
