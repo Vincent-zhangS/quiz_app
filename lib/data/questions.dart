@@ -40,8 +40,8 @@ const questions = [
   QuizQuestion(
     'What makes Waldo hard to find?',
     [
-      'He blends into busy backgrounds',
-      'He hides in plain sight', //correct
+      'He blends into busy backgrounds', //correct
+      'He hides in plain sight', 
       'He runs very clever',
       'Scooby-Doo',
     ],
