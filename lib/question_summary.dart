@@ -12,12 +12,22 @@ class QuestionSummary extends StatelessWidget {
         final isCorrect =
             data['user_answer'] == data['correct_answer']; // <-checks if the user's answer matches the correct one
         return Row(
-          children: [
-            Text(
-              ((data['question_index'] as int) + 1).toString(),
-              style: TextStyle( // <- adds styling for the numbers
-                fontSize: 18, // <- makes the question number bigger
-                color: isCorrect ? Colors.green : Colors.red, // <-makes correct answer green and red if wrong
+          children: [ //<-made numbers have circles around it
+            Container(
+              width: 40,
+              height: 40,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: isCorrect ? Colors.green : Colors.red,
+                shape: BoxShape.circle,
+              ),
+              child: Text(
+                ((data['question_index'] as int) + 1).toString(),
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             const SizedBox(width: 10),
