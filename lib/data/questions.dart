@@ -49,8 +49,8 @@ const questions = [
   QuizQuestion(
     'SCP-4885 also known as',
     [
-      'The reader',
       'Waldo', //correct
+      'The Reader', 
       'Find Him',
       'Online Friend',
     ],
