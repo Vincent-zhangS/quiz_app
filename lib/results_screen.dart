@@ -3,9 +3,10 @@ import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/question_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
-  const ResultsScreen({super.key, required this.chosenAnswers});
+  const ResultsScreen({super.key, required this.chosenAnswers, required this.onRestart}); //<-recieves the restart function
 
   final List<String> chosenAnswers;
+  final void Function() onRestart; //<-stores the restart function
 
   List<Map<String, Object>> getSummaryData() {
     List<Map<String, Object>> summary = [];
@@ -40,7 +41,7 @@ class ResultsScreen extends StatelessWidget {
             const SizedBox(height: 30),
             QuestionSummary(summaryData: summaryData),
             const SizedBox(height: 30),
-            TextButton(onPressed: () {}, child: const Text('Restart Quiz')),
+            TextButton(onPressed: onRestart, child: const Text('Restart Quiz')), //<-added functionality
           ],
         ),
       ),
